@@ -1,13 +1,14 @@
-package SEII.src.uebung2;
+package uebung2;
 
-public class adress1 {
+public class Adresse2 {
 
 	String strasse;
 	String hausnummer;
 	int postleitzahl;
 	String ort;
+	String string;
 	
-	public adress1(String str, String hausnr, int plz, String wohnort) {
+	public Adresse2(String str, String hausnr, int plz, String wohnort) {
 		strasse = str;
 		hausnummer = hausnr;
 		postleitzahl = plz;
