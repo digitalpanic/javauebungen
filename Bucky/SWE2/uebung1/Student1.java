@@ -1,18 +1,18 @@
-package SEII.src.uebung1;
+package uebung1;
 
 
 public class Student1 {
 
 	public String fullName;
 	public String studiengruppe;
-	public adress1 adr;
+	public Adresse1 adr;
 	
 	
 	public Student1(String str, String hausnr, int plz, String wohnort,String fullNamestudent, String studygroup ){
 	
 	fullName = fullNamestudent;
 	studiengruppe = studygroup;
-	adr = new adress1(str, hausnr, plz, wohnort);
+	adr = new Adresse1(str, hausnr, plz, wohnort);
 	}
 	
 	public Student1(String fullNamestudent, String studygroup){
