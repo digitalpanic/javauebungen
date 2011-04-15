@@ -1,6 +1,5 @@
-package SEII.src.uebung1;
+package uebung1;
 import java.util.StringTokenizer;
-import SEII.src.uebung1.*;
 
 
 public class Uebung1 {
