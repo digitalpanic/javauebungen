@@ -6,7 +6,7 @@ public class Adresse2 {
 	String hausnummer;
 	int postleitzahl;
 	String ort;
-	String string;
+
 	
 	public Adresse2(String str, String hausnr, int plz, String wohnort) {
 		strasse = str;
