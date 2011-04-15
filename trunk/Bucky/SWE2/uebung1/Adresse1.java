@@ -1,4 +1,4 @@
-package uebung1;
+package uebungsblatt1.uebung1;
 
 public class Adresse1 {
 
