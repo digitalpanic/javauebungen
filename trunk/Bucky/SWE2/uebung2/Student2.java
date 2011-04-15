@@ -1,4 +1,4 @@
-package uebung2;
+package uebungsblatt1.uebung2;
 
 
 
