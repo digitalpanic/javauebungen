@@ -1,16 +1,15 @@
-package SEII.src.uebung2;
+package uebung2;
 import java.util.StringTokenizer;
-import SEII.src.uebung1.*;
 
 
-public class Uebung1 {
+public class Uebung2 {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Student1 Studentobject = new Student1("Ernst-Kuzorra-Weg", "1", 45891, "Gelsenkirchen", "Raul Gonzales Blanco", "IBB2B");
+		Student2 Studentobject = new Student2("Ernst-Kuzorra-Weg", "1", 45891, "Gelsenkirchen", "Raul Gonzales Blanco", "IBB2B");
 		Studentobject.getDetails();
 		//Vollständiger Name in String ablegen
 		String fullname = Studentobject.fullName.toString();
