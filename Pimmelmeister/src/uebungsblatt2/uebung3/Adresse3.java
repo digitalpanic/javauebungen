@@ -15,8 +15,6 @@ public class Adresse3 {
 		ort = wohnort;
 	}
 	public String toString(){
-		System.out.println("Adresse: \n" + strasse + " " + hausnummer);
-		return postleitzahl + " " + ort;
-		
+		return postleitzahl + ort;
 	}
 }

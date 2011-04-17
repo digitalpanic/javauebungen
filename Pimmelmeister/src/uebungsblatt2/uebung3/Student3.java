@@ -4,12 +4,12 @@ package uebungsblatt2.uebung3;
 public class Student3 {
 
 	public String fullName;
-	Studiengruppe studiengruppe;
-	Ort wohnort;
+	public Studiengruppe studiengruppe;
+	public Ort wohnort;
 	public Adresse3 adr;
 	
 	
-	public Student3(String str, String hausnr, int plz, Ort ort,String fullNamestudent, 
+	public Student3(String str, String hausnr, int plz, Ort ort, String fullNamestudent, 
 			Studiengruppe sg ){
 	
 	fullName = fullNamestudent;
@@ -24,22 +24,12 @@ public class Student3 {
 	
 	}
 	
+	public String getDetails(){
 	
-	
-	public void getDetails(){
-		
-		//getDetails muss geändert werden es darf nur getter enthalten und 
-		//return ort+name usw. 
-		//die systemoutprintln darf im getDetails nicht stattfinden
-        //
-		if (adr == null){
-			System.out.println("Vollständiger Name: " + "\n" + fullName);
-			System.out.println("Studiengruppe: " + "\n" + studiengruppe);	
+	if (adr == null){
+			return fullName+studiengruppe;
 		}else {
-		System.out.println("Vollständiger Name: " + "\n" + fullName);
-		System.out.println(adr.toString());
-		System.out.println("Studiengruppe: " + "\n" + studiengruppe);
+		return fullName+adr+studiengruppe;
 		}
-	}
-	
+	}	
 }
