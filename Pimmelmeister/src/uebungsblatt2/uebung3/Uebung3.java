@@ -9,8 +9,10 @@ public class Uebung3 {
 		
 		System.out.println(Studentobject.getDetails());
 		
-	/**	StringTokenizer st = new StringTokenizer(Studentobject.fullName.toString(), " ");
-		StringTokenizer st2 = new StringTokenizer(Studentobject.studiengruppe.toString());
+		Student3 Studentobject2 = new Student3("Mario Luigi Müller",Studiengruppe.IB2C);
+		
+		StringTokenizer st = new StringTokenizer(Studentobject2.fullName.toString(), " ");
+		StringTokenizer st2 = new StringTokenizer(Studentobject2.studiengruppe.toString());
 		
 		System.out.println("Vollständiger Name: ");
 		while (st.hasMoreTokens()){
@@ -18,5 +20,5 @@ public class Uebung3 {
 		}   
 		System.out.println("Studiengruppe: ");
 		System.out.println(st2.nextToken());	
-	*/}
+	}
 }

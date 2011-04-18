@@ -1,14 +1,12 @@
 package uebungsblatt2.uebung3;
 
-
 public class Student3 {
 
 	public String fullName;
 	public Studiengruppe studiengruppe;
 	public Ort wohnort;
 	public Adresse3 adr;
-	
-	
+
 	public Student3(String str, String hausnr, int plz, Ort ort, String fullNamestudent, 
 			Studiengruppe sg ){
 	
@@ -27,9 +25,9 @@ public class Student3 {
 	public String getDetails(){
 	
 	if (adr == null){
-			return fullName+studiengruppe;
+			return fullName + " " +studiengruppe;
 		}else {
-		return fullName+adr+studiengruppe;
+		return fullName +  "\n" + adr + "\n" + studiengruppe;
 		}
 	}	
 }

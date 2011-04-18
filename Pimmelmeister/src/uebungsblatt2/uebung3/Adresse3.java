@@ -14,7 +14,13 @@ public class Adresse3 {
 		postleitzahl = plz;
 		ort = wohnort;
 	}
+	//Kopierkonstruktor
+	public Adresse3(Adresse3 orig){
+		
+	}
+	
+	
 	public String toString(){
-		return postleitzahl + ort;
+		return strasse + " "  + hausnummer + "\n" + postleitzahl + " " + ort;
 	}
 }
