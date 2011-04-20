@@ -9,6 +9,7 @@ public class Uebung3 {
 		
 		System.out.println(Studentobject.getDetails());
 		
+		
 		Student3 Studentobject2 = new Student3("Mario Luigi Müller",Studiengruppe.IB2C);
 		
 		StringTokenizer st = new StringTokenizer(Studentobject2.fullName.toString(), " ");
