@@ -1,7 +1,7 @@
 package uebungsblatt2.uebung4;
 import uebungsblatt2.uebung3.*;
 
-public class Student4 {
+public class Student4 implements Person{
 
 	public String fullName;
 	public Studiengruppe studiengruppe;
@@ -18,19 +18,18 @@ public class Student4 {
 	}
 	//Kopierkonstruktor
 	public Student4(Student4 copy){
-		fullName = copy.fullName;
-		studiengruppe = copy.studiengruppe;
-		wohnort = copy.wohnort;
-		adr = copy.adr;
-	}
+	wohnort = copy.wohnort;
+	adr = copy.adr;
+	fullName = copy.fullName;
+	studiengruppe = copy.studiengruppe;
+		}
 	
 	public Student4(String fullNamestudent, Studiengruppe sg){
 	fullName = fullNamestudent;
 	studiengruppe = sg;
-	
 	}
 	
-	public String getDetails(){
+	public String ermittleZugehoerigkeit(){
 	
 	if (adr == null){
 			return fullName + " " +studiengruppe;
