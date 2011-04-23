@@ -17,17 +17,17 @@ public class Student3 {
 	}
 	//Kopierkonstruktor
 	public Student3(Student3 copy){
-		fullName = copy.fullName;
-		studiengruppe = copy.studiengruppe;
-		wohnort = copy.wohnort;
-		adr = copy.adr;
-	}
+	wohnort = copy.wohnort;
+	adr = copy.adr;
+	fullName = copy.fullName;
+	studiengruppe = copy.studiengruppe;
+		}
 	
 	public Student3(String fullNamestudent, Studiengruppe sg){
 	fullName = fullNamestudent;
 	studiengruppe = sg;
-	
 	}
+	
 	
 	public String getDetails(){
 	

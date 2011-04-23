@@ -1,39 +1,37 @@
 package uebungsblatt2.uebung4;
 import uebungsblatt2.uebung3.*;
 
-public class Professor4 {
+public class Professor4 implements Person{
 
 	public String fullName;
 	public String fakultaet;
 	public Ort wohnort;
 	public Adresse4 adr;
 
-	public Professor4(String str, String hausnr, int plz, Ort ort, String fullNamestudent, 
-			String fakult ){
+	public Professor4(String str, String hausnr, int plz, Ort ort, String fullName, 
+			String faculty){
 	
-	fullName = fullNamestudent;
-	fakultaet = fakult;
+	this.fullName = fullName;
+	fakultaet = faculty;
 	wohnort = ort;
 	adr = new Adresse4(str, hausnr, plz, ort.toString());
 	}
-	//Kopierkonstruktor
+//Kopierkonstruktor
 	public Professor4(Professor4 copy){
-		fullName = copy.fullName;
-		fakultaet = copy.fakultaet;
-		wohnort = copy.wohnort;
-		adr = copy.adr;
+	wohnort = copy.wohnort;
+	adr = copy.adr;
+	fullName = copy.fullName;
+	fakultaet = copy.fakultaet;
+		}
+	
+	public Professor4(String fullName, String faculty){
+	this.fullName = fullName;
+	fakultaet = faculty;
 	}
-	
-	public Professor4(String fullNamestudent, String fakult){
-	fullName = fullNamestudent;
-	fakultaet = fakult;
-	
-	}
-	
-	public String getDetails(){
-	
-	if (adr == null){
-			return fullName + " " + fakultaet;
+
+	public String ermittleZugehoerigkeit() {
+		if (adr == null){
+			return fullName + "\n" + fakultaet;
 		}else {
 		return fullName +  "\n" + adr + "\n" + fakultaet;
 		}

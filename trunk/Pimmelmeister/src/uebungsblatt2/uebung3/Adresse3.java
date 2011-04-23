@@ -14,7 +14,7 @@ public class Adresse3 {
 		postleitzahl = plz;
 		ort = wohnort;
 	}
-	//Kopierkonstruktor
+	//Kopierkonstruktor erstellen
 	public Adresse3(Adresse3 copy){
 		strasse = copy.strasse;
 		hausnummer = copy.hausnummer;
