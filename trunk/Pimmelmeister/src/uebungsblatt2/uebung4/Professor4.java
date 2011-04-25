@@ -3,10 +3,10 @@ import uebungsblatt2.uebung3.*;
 
 public class Professor4 implements Person{
 
-	public String fullName;
-	public String fakultaet;
-	public Ort wohnort;
-	public Adresse4 adr;
+	private String fullName;
+	private String fakultaet;
+	private Ort wohnort;
+	private Adresse4 adr;
 
 	public Professor4(String str, String hausnr, int plz, Ort ort, String fullName, 
 			String faculty){
