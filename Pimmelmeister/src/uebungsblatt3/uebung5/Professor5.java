@@ -3,8 +3,7 @@ import uebungsblatt2.uebung3.*;
 
 public class Professor5 extends Hochschulperson5 {
 
-	public String fakultaet;
-	
+	private String fakultaet;
 	
 	public Professor5(String hochschule, String fullName, Ort wohnort,
 			String strasse, String hausnummer, int plz, String fakultaet) {
@@ -13,11 +12,16 @@ public class Professor5 extends Hochschulperson5 {
 		
 	}
 
-	public String ermittleZugehoerigkeit() {
-		if (adr == null){
-			return fullName + "\n" + fakultaet + "\n" + super.ermittleZugehoerigkeit();
-		}else {
-		return fullName +  "\n" + adr + "\n" + fakultaet + "\n" + super.ermittleZugehoerigkeit();
-		}
-	}	
+	public String getDetails(){
+		super.ermittleZugehoerigkeit();
+		return super.fullName.toString();
+	}
+	
+//	public String getDetails() {
+//		if (adr == null){
+//			return fullName + "\n" + fakultaet;
+//		}else {
+//		return fullName +  "\n" + adr + "\n" + fakultaet;
+//		}
+		
 }
