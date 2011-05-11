@@ -11,17 +11,14 @@ public class Professor5 extends Hochschulperson5 {
 		this.fakultaet = fakultaet;
 		
 	}
-
-	public String getDetails(){
-		super.ermittleZugehoerigkeit();
-		return super.fullName.toString();
-	}
 	
-//	public String getDetails() {
-//		if (adr == null){
-//			return fullName + "\n" + fakultaet;
-//		}else {
-//		return fullName +  "\n" + adr + "\n" + fakultaet;
-//		}
+	public String getDetails() {
+		if (adr == null){
+			return fullName + "\n" + fakultaet;
+		}else {
+		return fullName +  "\n" + adr + "\n" + fakultaet;
+		}
 		
+}
+	
 }
