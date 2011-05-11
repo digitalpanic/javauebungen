@@ -21,4 +21,14 @@ public class Hochschulperson5 implements Person {
 		return hochschule;
 	}
 	
+	public String getDetails() {
+		if (adr == null){
+			return fullName;
+		}else {
+		return fullName +  "\n" + adr;
+		
+	}
+	
+	}
 }
+
