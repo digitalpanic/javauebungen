@@ -13,11 +13,7 @@ public class Professor5 extends Hochschulperson5 {
 	}
 	
 	public String getDetails() {
-		if (adr == null){
-			return fullName + "\n" + fakultaet;
-		}else {
-		return fullName +  "\n" + adr + "\n" + fakultaet;
-		}
+	return super.getDetails() + "\n" + fakultaet;
 		
 }
 	

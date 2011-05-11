@@ -12,12 +12,8 @@ public class Student5 extends Hochschulperson5  {
 	}
 	
 	public String getDetails(){
+	return super.getDetails() + "\n" + studiengruppe;
 	
-	if (adr == null){
-			return fullName + " " +studiengruppe;
-		}else {
-		return fullName +  "\n" + adr + "\n" + studiengruppe;
-		}
 	}
 
 }

@@ -11,9 +11,11 @@ public class Uebung5b {
 		System.out.println(((Professor5_ABC) personobject).getDetails());
 		}
 		System.out.println("*************************************************");
+		
 		Professor5_ABC professorobject = new Professor5_ABC("Hochschule München", "Harald Lesch", Ort.Dortmund, "Pelargonienweg", "52", 81377, "Fakultaet 07");
 		System.out.println(professorobject.getDetails()+"\n"+professorobject.ermittleZugehoerigkeit());
 		System.out.println("*************************************************");
+		
 		Student5_ABC studentobject = new Student5_ABC("LMU", "Elite - Student", Ort.Muenchen, "Knorrstraße", "54", 80806, Studiengruppe.IB4C);
 		System.out.println(studentobject.getDetails()+"\n"+studentobject.ermittleZugehoerigkeit());
 		
