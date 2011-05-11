@@ -6,9 +6,9 @@ public class Uebung5b {
 		System.out.println("Test der Person mit getDetails und Typecast: ");
 		Person personobject = new Professor5_ABC("Hochschule München", "Harald Lesch", Ort.Dortmund, "Pelargonienweg", "52", 81377, "Fakultaet 07");
 		System.out.println(personobject.ermittleZugehoerigkeit());
-		if (personobject instanceof Hochschulperson5)
+		if (personobject instanceof Professor5_ABC)
 		{
-		System.out.println(((Hochschulperson5) personobject).getDetails());
+		System.out.println(((Professor5_ABC) personobject).getDetails());
 		}
 		System.out.println("*************************************************");
 		Professor5_ABC professorobject = new Professor5_ABC("Hochschule München", "Harald Lesch", Ort.Dortmund, "Pelargonienweg", "52", 81377, "Fakultaet 07");
