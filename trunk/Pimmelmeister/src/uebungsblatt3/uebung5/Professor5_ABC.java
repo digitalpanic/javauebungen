@@ -1,7 +1,7 @@
 package uebungsblatt3.uebung5;
 import uebungsblatt2.uebung3.*;
 
-public class Professor5_ABC extends Hochschulperson5 {
+public class Professor5_ABC extends Hochschulperson5_ABC {
 
 	private String fakultaet;
 	
