@@ -1,6 +1,6 @@
 package uebungsblatt4.uebung6;
 
-public class Adresse6 {
+public class Adresse6 implements Cloneable{
 
 	private String strasse;
 	private String hausnummer;
@@ -21,7 +21,11 @@ public class Adresse6 {
 		postleitzahl = copy.postleitzahl;
 		ort = copy.ort;
 	}
-	
+	//redefinierte Clone Methode ohne zusätzliche Verändernungen 
+	//da keine veränderlichen Datentypen 
+	public Adresse6 clone() throws CloneNotSupportedException{
+		return (Adresse6)super.clone();
+	}
 	
 	public String toString(){
 		return strasse + " "  + hausnummer + "\n" + postleitzahl + " " + ort;
