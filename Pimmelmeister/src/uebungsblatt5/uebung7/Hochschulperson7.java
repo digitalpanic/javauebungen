@@ -1,23 +1,23 @@
-package uebungsblatt4.uebung6;
+package uebungsblatt5.uebung7;
 
-public class Hochschulperson6 implements Person, Cloneable {
+public class Hochschulperson7 implements Person, Cloneable {
 	
 	private String hochschule;
 	protected String fullName;
-	protected Adresse6 adr;
+	protected Adresse7 adr;
 
 	//Konstruktor ohne Adresse	
-	protected Hochschulperson6 (String hochschule, String fullName)
+	protected Hochschulperson7 (String hochschule, String fullName)
 	{
 	this.hochschule = hochschule;
 	this.fullName = fullName;
 	}
 //Konstruktor mit Adresse
-	protected Hochschulperson6 (String hochschule, String fullName, Ort wohnort, 
+	protected Hochschulperson7 (String hochschule, String fullName, Ort wohnort, 
 							 String strasse, String hausnummer, int plz){
 		this.hochschule = hochschule;
 		this.fullName = fullName;
-		adr = new Adresse6(strasse, hausnummer, plz, wohnort.toString());
+		adr = new Adresse7(strasse, hausnummer, plz, wohnort.toString());
 	}
 
 		
@@ -33,7 +33,7 @@ public class Hochschulperson6 implements Person, Cloneable {
 	}
 	}
 //Methode isSame() von Hochschulperson6 mittels getterMethoden in Abhängigkeit von einer vorhandenen Adresse
-	public boolean isSame(Hochschulperson6 hp){
+	public boolean isSame(Hochschulperson7 hp){
 	if (adr != null){
 		if (getHochschule().equals(hp.getHochschule())&&getFullName().equals(hp.getFullName())&&getAdr().equals(hp.getAdr())){
 		return true;}
@@ -47,8 +47,8 @@ public class Hochschulperson6 implements Person, Cloneable {
 	return false;}
 
 	//redefinierte Methode clone für Hochschulperson6
-	public Hochschulperson6 clone() throws CloneNotSupportedException {
-		Hochschulperson6 copy = (Hochschulperson6)super.clone();
+	public Hochschulperson7 clone() throws CloneNotSupportedException {
+		Hochschulperson7 copy = (Hochschulperson7)super.clone();
 		if (adr != null){
 		copy.adr = adr.clone();}
 		return copy;
@@ -60,7 +60,7 @@ public class Hochschulperson6 implements Person, Cloneable {
 	public String getFullName() {
 		return fullName;
 	}
-	public Adresse6 getAdr() {
+	public Adresse7 getAdr() {
 		return adr;
 	}
 	public void setHochschule(String hochschule) {
@@ -69,7 +69,7 @@ public class Hochschulperson6 implements Person, Cloneable {
 	public void setFullName(String fullName) {
 		this.fullName = fullName;
 	}
-	public void setAdr(Adresse6 adr) {
+	public void setAdr(Adresse7 adr) {
 		this.adr = adr;
 	}
 }
