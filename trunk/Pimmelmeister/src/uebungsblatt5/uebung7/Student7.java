@@ -1,15 +1,15 @@
-package uebungsblatt4.uebung6;
+package uebungsblatt5.uebung7;
 
-public class Student6 extends Hochschulperson6 implements Cloneable {
+public class Student7 extends Hochschulperson7 implements Cloneable {
 
 	private Studiengruppe studiengruppe;
 
-	public Student6(String hochschule, String fullName, Studiengruppe studiengruppe){
+	public Student7(String hochschule, String fullName, Studiengruppe studiengruppe){
 		super(hochschule, fullName);
 		this.studiengruppe = studiengruppe;
 	}
 	
-	public Student6(String hochschule, String fullName, Ort wohnort,
+	public Student7(String hochschule, String fullName, Ort wohnort,
 			String strasse, String hausnummer, int plz, Studiengruppe studiengruppe) {
 		super(hochschule, fullName, wohnort, strasse, hausnummer, plz);
 		this.studiengruppe = studiengruppe;
@@ -24,15 +24,15 @@ public class Student6 extends Hochschulperson6 implements Cloneable {
 		return super.ermittleZugehoerigkeit() + "\n" + getStudiengruppe();
 	}
 	//Prüfung der isSame Methode für Student da diese Klasse von Hochschulperson erbt muss diese mit getStudiengruppe überladen werden.	
-	public boolean isSame(Student6 x){
+	public boolean isSame(Student7 x){
 		if(super.isSame(x)&&getStudiengruppe().equals(x.getStudiengruppe())){
 		return true;
 	}else{
 		return false;
 	}}
 	//redefinierte Methode clone() für Student6
-	public Student6 clone() throws CloneNotSupportedException {
-		Student6 copy = (Student6)super.clone();
+	public Student7 clone() throws CloneNotSupportedException {
+		Student7 copy = (Student7)super.clone();
 		return copy;
 	}
 	

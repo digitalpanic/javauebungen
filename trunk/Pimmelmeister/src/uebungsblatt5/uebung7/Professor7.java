@@ -1,22 +1,22 @@
-package uebungsblatt4.uebung6;
+package uebungsblatt5.uebung7;
 
-public class Professor6 extends Hochschulperson6 {
+public class Professor7 extends Hochschulperson7 {
 
 	private String fakultaet;
 //Konstruktor mit Adresse	
-	public Professor6(String hochschule, String fullName, Ort wohnort,
+	public Professor7(String hochschule, String fullName, Ort wohnort,
 			String strasse, String hausnummer, int plz, String fakultaet) {
 		super(hochschule, fullName, wohnort, strasse, hausnummer, plz);
 		this.fakultaet = fakultaet;
 		
 	}
 //einfacher Konstruktor ohne Adresse
-	public Professor6(String hochschule, String fullName, String fakultaet){
+	public Professor7(String hochschule, String fullName, String fakultaet){
 	super(hochschule, fullName);
 	this.fakultaet = fakultaet;
 	}
 //Prüfung der isSame Methode für Professor da diese Klasse von Hochschulperson erbt muss diese mit getFakultät überladen werden.
-	public boolean isSame(Professor6 x){
+	public boolean isSame(Professor7 x){
 		if(super.isSame(x)&&getFakultaet().equals(x.getFakultaet())){
 		return true;
 	}else{
@@ -33,8 +33,8 @@ public class Professor6 extends Hochschulperson6 {
 		return super.ermittleZugehoerigkeit()+ "\n" + getFakultaet();
 	}
 	//redefinierte Methode clone() für Student6
-	public Professor6 clone() throws CloneNotSupportedException {
-		Professor6 copy = (Professor6)super.clone();
+	public Professor7 clone() throws CloneNotSupportedException {
+		Professor7 copy = (Professor7)super.clone();
 		return copy;
 	}
 	//getter und Setter Methoden
