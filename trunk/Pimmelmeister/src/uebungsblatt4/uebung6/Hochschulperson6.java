@@ -19,10 +19,7 @@ public class Hochschulperson6 implements Person, Cloneable {
 		this.fullName = fullName;
 		adr = new Adresse6(strasse, hausnummer, plz, wohnort.toString());
 	}
-
-		
 	public String ermittleZugehoerigkeit() {
-		
 		return hochschule +  " " + fullName ;
 	}
 	public String getDetails() {
@@ -34,7 +31,8 @@ public class Hochschulperson6 implements Person, Cloneable {
 	}
 //Methode isSame() von Hochschulperson6 mittels getterMethoden in Abh√§ngigkeit von einer vorhandenen Adresse
 	public boolean isSame(Hochschulperson6 hp){
-	if (adr != null){
+	//‰ndern
+		if (adr != null){
 		if (getHochschule().equals(hp.getHochschule())&&getFullName().equals(hp.getFullName())&&getAdr().equals(hp.getAdr())){
 		return true;}
 	}else {

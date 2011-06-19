@@ -25,11 +25,10 @@ public class Student6 extends Hochschulperson6 implements Cloneable {
 	}
 	//Prüfung der isSame Methode für Student da diese Klasse von Hochschulperson erbt muss diese mit getStudiengruppe überladen werden.	
 	public boolean isSame(Student6 x){
-		if(super.isSame(x)&&getStudiengruppe().equals(x.getStudiengruppe())){
-		return true;
-	}else{
-		return false;
-	}}
+		return (super.isSame(x)&&getStudiengruppe().equals(x.getStudiengruppe()));
+	}
+	
+	
 	//redefinierte Methode clone() für Student6
 	public Student6 clone() throws CloneNotSupportedException {
 		Student6 copy = (Student6)super.clone();

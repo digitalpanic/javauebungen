@@ -7,7 +7,7 @@ public class Hochschulperson7 implements Person, Cloneable {
 	protected Adresse7 adr;
 
 	//Konstruktor ohne Adresse	
-	protected Hochschulperson7 (String hochschule, String fullName)
+	protected Hochschulperson7 (String hochschule, String fullName) throws NullPointerException
 	{
 	this.hochschule = hochschule;
 	this.fullName = fullName;
