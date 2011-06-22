@@ -9,23 +9,33 @@ public class Hochschulperson7 implements Person, Cloneable {
 	//Konstruktor ohne Adresse	
 	protected Hochschulperson7 (String hochschule, String fullName) throws NullPointerException
 	{
-	this.hochschule = hochschule;
-	this.fullName = fullName;
+		if (fullName != null) {
+		
+		this.fullName = fullName;
+		this.hochschule = hochschule;	
+		}else { 
+			
+		}
+		
+		
 	}
+	
 //Konstruktor mit Adresse
 	protected Hochschulperson7 (String hochschule, String fullName, Ort wohnort, 
 							 String strasse, String hausnummer, int plz){
+		try {
+			this.fullName = fullName;
+		} catch (NullPointerException e) {
+			System.out.println("Es wurde kein Name eingegeben!");	
+		}		
 		this.hochschule = hochschule;
-		this.fullName = fullName;
 		adr = new Adresse7(strasse, hausnummer, plz, wohnort.toString());
 	}
-
-		
-	public String ermittleZugehoerigkeit() {
-		
+	
+public String ermittleZugehoerigkeit() {
 		return hochschule +  " " + fullName ;
 	}
-	public String getDetails() {
+public String getDetails() {
 		if (adr == null){
 			return fullName + " " +hochschule;
 		}else {
@@ -34,18 +44,22 @@ public class Hochschulperson7 implements Person, Cloneable {
 	}
 //Methode isSame() von Hochschulperson6 mittels getterMethoden in Abhängigkeit von einer vorhandenen Adresse
 	public boolean isSame(Hochschulperson7 hp){
-	if (adr != null){
-		if (getHochschule().equals(hp.getHochschule())&&getFullName().equals(hp.getFullName())&&getAdr().equals(hp.getAdr())){
-		return true;}
-	}else {
-		if (adr == null){
-			if (getHochschule().equals(hp.getHochschule())&&getFullName().equals(hp.getFullName())){
-				return true;
-			}
+	boolean adrcheck = false;
+		if ((hp==null) || (this.getClass() != hp.getClass()))
+		return false;
+		
+		if (getAdr() == null){
+			adrcheck = hp.getAdr() == null;
+		}	else {
+			adrcheck = (getAdr().equals(hp.getAdr()));
 		}
+		return( 
+		adrcheck &&
+		getHochschule().equals(hp.getHochschule())&&
+		
+		getFullName().equals(hp.getFullName())
+		);
 	}
-	return false;}
-
 	//redefinierte Methode clone für Hochschulperson6
 	public Hochschulperson7 clone() throws CloneNotSupportedException {
 		Hochschulperson7 copy = (Hochschulperson7)super.clone();

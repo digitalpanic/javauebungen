@@ -8,15 +8,15 @@ public class Uebung7 {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		
-		Hochschulperson7 test = new Hochschulperson7("Hochschule München", "Harald Lesch", Ort.Hamburg, "Waldweg", "7a", 80806);
-		Hochschulperson7 test2 = new Hochschulperson7 ("Hochschule München", "Harald Lesch", Ort.Hamburg, "Waldweg", "7b", 80806);
-		Hochschulperson7 test3 = new Hochschulperson7 ("Hochschule Freising", "Angela Merkel");
+		Hochschulperson7 test = new Hochschulperson7("Hochschule M�nchen", "Harald Lesch", Ort.Hamburg, "Waldweg", "7a", 80806);
+		Hochschulperson7 test2 = new Hochschulperson7 ("Hochschule M�nchen", "Harald Lesch", Ort.Hamburg, "Waldweg", "7b", 80806);
+		Hochschulperson7 test3 = new Hochschulperson7 ("Hochschule M�nchen", null);
 		Hochschulperson7 test4 = test3.clone();
 		Hochschulperson7 test5 = test2.clone();
 		System.out.println("*******Testen der Hochschulperson**********");
 		System.out.println("Test5 enthält die gleichen Daten wie Test2: "+test5.isSame(test2));
 		System.out.println("Test2 enthält die gleichen Daten wie Test: "+test2.isSame(test));
-		System.out.println("Test3 enthält die gleichen Daten wie Test4: " +test4.isSame(test3));
+		System.out.println("Test3 enthält die gleichen Daten wie Test2: " +test2.isSame(test3));
 		//Veränderung der Hochschule in Test2
 		test2.setHochschule("Hochschule Bochum");
 		System.out.println("Die Adresse in test entspricht der von test2: "+test.adr.equals(test2.adr));

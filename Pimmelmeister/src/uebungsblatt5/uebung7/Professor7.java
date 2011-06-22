@@ -11,17 +11,14 @@ public class Professor7 extends Hochschulperson7 {
 		
 	}
 //einfacher Konstruktor ohne Adresse
-	public Professor7(String hochschule, String fullName, String fakultaet){
+	public Professor7(String hochschule, String fullName, String fakultaet) throws Exception{
 	super(hochschule, fullName);
 	this.fakultaet = fakultaet;
 	}
 //Prüfung der isSame Methode für Professor da diese Klasse von Hochschulperson erbt muss diese mit getFakultät überladen werden.
 	public boolean isSame(Professor7 x){
-		if(super.isSame(x)&&getFakultaet().equals(x.getFakultaet())){
-		return true;
-	}else{
-		return false;
-	}}
+		return (super.isSame(x)&&getFakultaet().equals(x.getFakultaet()));
+		}
 
 //Methode zur Rückgabe in Abhängigkeit des Vorhandensein einer Adresse
 	public String getDetails() {

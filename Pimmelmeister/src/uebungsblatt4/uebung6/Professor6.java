@@ -17,11 +17,8 @@ public class Professor6 extends Hochschulperson6 {
 	}
 //Prüfung der isSame Methode für Professor da diese Klasse von Hochschulperson erbt muss diese mit getFakultät überladen werden.
 	public boolean isSame(Professor6 x){
-		if(super.isSame(x)&&getFakultaet().equals(x.getFakultaet())){
-		return true;
-	}else{
-		return false;
-	}}
+		return (super.isSame(x)&&getFakultaet().equals(x.getFakultaet()));
+		}
 
 //Methode zur Rückgabe in Abhängigkeit des Vorhandensein einer Adresse
 	public String getDetails() {

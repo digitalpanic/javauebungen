@@ -14,13 +14,14 @@ public class Adresse7 implements Cloneable{
 		postleitzahl = plz;
 		ort = wohnort;
 	}
-	//Kopierkonstruktor erstellen
-	public Adresse7(Adresse7 copy){
-		strasse = copy.strasse;
-		hausnummer = copy.hausnummer;
-		postleitzahl = copy.postleitzahl;
-		ort = copy.ort;
-	}
+//	//Kopierkonstruktor erstellen
+//	public Adresse6(Adresse6 copy){
+//		strasse = copy.strasse;
+//		hausnummer = copy.hausnummer;
+//		postleitzahl = copy.postleitzahl;
+//		ort = copy.ort;
+//	}
+	
 	//redefinierte Clone Methode ohne zusätzliche Verändernungen 
 	//da keine veränderlichen Datentypen 
 	public Adresse7 clone() throws CloneNotSupportedException{
@@ -30,15 +31,14 @@ public class Adresse7 implements Cloneable{
 	public String toString(){
 		return strasse + " "  + hausnummer + "\n" + postleitzahl + " " + ort;
 	}
-	
-	public boolean equals(Adresse7 adr){
-		if (getStrasse().equals(adr.getStrasse())&&getHausnummer().equals(adr.getHausnummer())&&
-			getPostleitzahl()==adr.getPostleitzahl()&&getOrt().equals(adr.getOrt())){
-			return true;
-		}else {
-		return false;
+
+	public boolean equals(Object adr){
+		if ((adr == null) || (adr.getClass() != this.getClass())){
+			return false;
 		}
-	}
+		else return (getStrasse().equals(((Adresse7)adr).getStrasse())&&getHausnummer().equals(((Adresse7)adr).getHausnummer())&&
+			getPostleitzahl()==((Adresse7)adr).getPostleitzahl()&&getOrt().equals(((Adresse7)adr).getOrt()));
+		}
 	
 	//Getter erstellen
 	String getStrasse() {

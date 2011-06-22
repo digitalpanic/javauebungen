@@ -31,19 +31,21 @@ public class Hochschulperson6 implements Person, Cloneable {
 	}
 //Methode isSame() von Hochschulperson6 mittels getterMethoden in Abhängigkeit von einer vorhandenen Adresse
 	public boolean isSame(Hochschulperson6 hp){
-	//�ndern
-		if (adr != null){
-		if (getHochschule().equals(hp.getHochschule())&&getFullName().equals(hp.getFullName())&&getAdr().equals(hp.getAdr())){
-		return true;}
-	}else {
-		if (adr == null){
-			if (getHochschule().equals(hp.getHochschule())&&getFullName().equals(hp.getFullName())){
-				return true;
-			}
+	boolean adrcheck = false;
+		if ((hp==null) || (this.getClass() != hp.getClass()))
+		return false;
+		
+		if (getAdr() == null){
+			adrcheck = hp.getAdr() == null;
+		}	else {
+			adrcheck = (getAdr().equals(hp.getAdr()));
 		}
+		return( 
+		adrcheck &&
+		getHochschule().equals(hp.getHochschule())&&
+		getFullName().equals(hp.getFullName())
+		);
 	}
-	return false;}
-
 	//redefinierte Methode clone für Hochschulperson6
 	public Hochschulperson6 clone() throws CloneNotSupportedException {
 		Hochschulperson6 copy = (Hochschulperson6)super.clone();
