@@ -25,7 +25,7 @@ public class Uebung1 {
 		while (st.hasMoreTokens()){
 			System.out.println(st.nextToken());
 		}   
-		System.out.println("Studiengruppe: ");
+		System.out.println("Studiengruppe1: ");
 		System.out.println(st2.nextToken());
 		
 	}
